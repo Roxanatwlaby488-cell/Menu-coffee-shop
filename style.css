@@ -1,0 +1,203 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f8f8;
+            color: #1e1e1e;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 40px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.03);
+            padding: 3rem 2rem;
+        }
+
+        /* ===== Header ===== */
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0a3d2e;
+            letter-spacing: -1px;
+        }
+
+        .header h1 span {
+            color: #2d8f6f;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: #999;
+            margin-top: 0.3rem;
+        }
+
+        /* ===== Grid ===== */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            margin: 2rem 0;
+            justify-items: center;
+        }
+
+        /* ===== Card ===== */
+        .menu-card {
+            background: #fafafa;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            transition: all 0.25s ease;
+            max-width: 280px;  /* کوچیک‌تر از قبل */
+            width: 100%;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            border-color: #e0e0e0;
+        }
+
+        /* ===== عکس مربعی با اندازه کوچیک‌تر ===== */
+        .menu-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;     /* مربع کامل */
+            object-fit: cover;
+            display: block;
+        }
+
+        .menu-card-body {
+            padding: 1rem 1rem 1.3rem;
+        }
+
+        .menu-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-card-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e1e1e;
+        }
+
+        .menu-card-price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2d8f6f;
+            white-space: nowrap;
+        }
+
+        .menu-card-ingredients {
+            font-size: 0.78rem;
+            color: #999;
+            margin-top: 0.2rem;
+            line-height: 1.6;
+        }
+
+        /* ===== Contact ===== */
+        .contact-info {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .contact-info .item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info .item span:first-child {
+            font-weight: 600;
+            color: #0a3d2e;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+
+        @media (max-width: 900px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .menu-card {
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+                border-radius: 28px;
+            }
+
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .menu-card {
+                max-width: 340px;
+            }
+
+            .menu-card-body {
+                padding: 0.8rem 1rem 1.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.7rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 1rem 0.8rem;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .menu-card {
+                max-width: 100%;
+            }
+
+            .menu-card-header {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+        }
